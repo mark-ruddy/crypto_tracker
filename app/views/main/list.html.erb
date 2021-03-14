@@ -2,17 +2,35 @@
   <table class='table'>
     <thead style='position: sticky;top: 0' class='thead-dark'>
       <tr>
-        <th class='header' scope='col'>Index</th>
+        <th class='header' scope='col'>#</th>
+        <th class='header' scope='col'>Icon</th>
         <th class='header' scope='col'>Symbol</th>
         <th class='header' scope='col'>Name</th>
+        <th class='header' scope='col'>Price <%= "(#{@currency.upcase})" %></th>
+        <th class='header' scope='col'>24H Change</th>
+        <th class='header' scope='col'>7D Change</th>
       </tr>
     </thead>
     <tbody>
       <% @coins.each_with_index do |coin, index| %>
         <tr>
-          <td><%= index.to_s %></td>
+          <td><%= (index+1).to_s %></td>
+          <td><img src=<%= coin['image'] %> class='icon'></td>
           <td><%= coin['symbol'] %></td>
           <td><%= coin['name'] %></td>
+          <td><%= coin['current_price'] %></td>
+
+          <% if coin['price_change_percentage_24h'].positive? %>
+            <td class='positive'><%= "#{coin['price_change_percentage_24h'].round(2)}%" %></td>
+          <% else %>
+            <td class='negative'><%= "#{coin['price_change_percentage_24h'].round(2)}%" %></td>
+          <% end %>
+
+          <% if coin['price_change_percentage_7d_in_currency'].positive? %>
+            <td class='positive'><%= "#{coin['price_change_percentage_7d_in_currency'].round(2)}%" %></td>
+          <% else %>
+            <td class='negative'><%= "#{coin['price_change_percentage_7d_in_currency'].round(2)}%" %></td>
+          <% end %>
         </tr>
       <% end %>
     </tbody>

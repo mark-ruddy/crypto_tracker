@@ -34,8 +34,8 @@ gem 'will_paginate'
 # bootstrap with sass lang
 gem 'bootstrap-sass'
 
-# Ruby wrapper for the coingecko API
-gem 'coingecko_client'
+# For parsing API calls
+gem 'excon'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

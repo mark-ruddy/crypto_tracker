@@ -238,6 +238,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   coingecko_client
+  excon
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)

@@ -25,6 +25,7 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
+  background-color: #282828;
 }
 
 section {
@@ -47,6 +48,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  color: #fff;
 }
 
 h1 {
@@ -68,6 +70,7 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  color: #fff;
 }
 
 /* forms */
@@ -182,4 +185,21 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
+}
+
+th, td {
+  color: #fff;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+
+.icon {
+  width: 3em;
+  height: 3em;
 }
