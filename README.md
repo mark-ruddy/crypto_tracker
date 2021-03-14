@@ -1,24 +1,5 @@
-# README
+# Crypto_Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Straightforward Rails 6 app which tracks the top 250 cryptocurrencies by market-cap.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[![tracker.png](https://i.postimg.cc/MpPY38xp/tracker.png)](https://postimg.cc/jDfNCmLp)
