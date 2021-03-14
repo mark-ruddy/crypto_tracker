@@ -1,0 +1,20 @@
+<ul>
+  <table class='table'>
+    <thead style='position: sticky;top: 0' class='thead-dark'>
+      <tr>
+        <th class='header' scope='col'>Index</th>
+        <th class='header' scope='col'>Symbol</th>
+        <th class='header' scope='col'>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @coins.each_with_index do |coin, index| %>
+        <tr>
+          <td><%= index.to_s %></td>
+          <td><%= coin['symbol'] %></td>
+          <td><%= coin['name'] %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</ul>
